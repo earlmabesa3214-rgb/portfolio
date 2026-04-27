@@ -1,5 +1,4 @@
 
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -933,8 +932,12 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 480px) {
   :root { --pad-x: 14px; }
   .hero-name { font-size: clamp(32px, 11vw, 48px); }
-  .about-stats { grid-template-columns: 1fr 1fr; }
-  .about-stats .about-stat:last-child { grid-column: span 2; }
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .about-stat .num { font-size: clamp(18px, 5.5vw, 24px); }
+  .about-stat .lb { font-size: 9.5px; letter-spacing: .03em; }
   .contact-grid { grid-template-columns: 1fr; }
   .project-features-list { font-size: 11.5px; }
   .hero-badge { font-size: 10.5px; padding: 5px 10px; }
@@ -944,8 +947,12 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 360px) {
   :root { --pad-x: 12px; }
   .tech-grid { grid-template-columns: 1fr; }
-  .about-stats { grid-template-columns: 1fr; }
-  .about-stats .about-stat:last-child { grid-column: auto; }
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+  .about-stat .num { font-size: clamp(16px, 5vw, 20px); }
+  .about-stat .lb { font-size: 9px; }
   .nav-logo-text { font-size: 12px; }
   .hero-name { font-size: clamp(28px, 11vw, 40px); }
 }
