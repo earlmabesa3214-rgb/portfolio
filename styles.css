@@ -964,3 +964,33 @@ footer a:hover { color: var(--accent); }
     scroll-behavior: auto !important;
   }
 }
+/* Force About stats to stay in one line on all screen sizes */
+.about-stats {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch !important;
+  justify-content: space-between !important;
+  gap: clamp(6px, 2vw, 18px) !important;
+  width: 100% !important;
+}
+
+.about-stat {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  text-align: center;
+}
+
+.about-stat .num {
+  font-size: clamp(16px, 5vw, 32px) !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.about-stat .lb {
+  font-size: clamp(8px, 2.5vw, 11px) !important;
+  line-height: 1.2 !important;
+  margin-top: 6px !important;
+  white-space: normal !important;
+  word-break: normal !important;
+}
