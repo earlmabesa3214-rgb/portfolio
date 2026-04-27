@@ -246,9 +246,7 @@ nav {
   animation: rise 1s .35s cubic-bezier(.22,1,.36,1) forwards;
 }
 
-/* ============================================
-   EDITOR CARD
-   ============================================ */
+
 .editor-card {
   background: var(--surface);
   border: 1px solid var(--border-2);
