@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Earl Mirshen Mabesa — Full Stack Developer & Video Editor. BSIT student building 3D web experiences and reverse-bidding marketplaces." />
+<title>Earl Mabesa — Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="canvas3d"></canvas>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-mark">EM</div>
+    <div class="nav-logo-text"><span class="at">@</span><span class="name">earlmabesa</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about"><span class="num">01.</span> about</a></li>
+    <li><a href="#skills"><span class="num">02.</span> skills</a></li>
+    <li><a href="#projects"><span class="num">03.</span> projects</a></li>
+<li><a href="#experience"><span class="num">04.</span> experience</a></li>
+    <li><a href="#education"><span class="num">05.</span> education</a></li>
+    <a href="#contact" class="nav-cta"><span class="dot"></span><span>available for work</span></a>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span class="loc">Dasmariñas, Cavite</span>
+      <span class="sep">·</span>
+      <span>Open to opportunities</span>
+    </div>
+
+    <h1 class="hero-name">
+      Hi, I'm <span class="gradient">Earl Mabesa</span>
+    </h1>
+
+    <div class="hero-role">
+      <span class="accent">&gt;</span> I build <span class="typing" id="typed">full-stack web apps</span>
+    </div>
+
+    <p class="hero-desc">
+      Full Stack Developer & Video Editor based in the Philippines. I build <strong>user-focused web and application </strong>systems, <strong>with a strong focus on UI/UX,</strong> clean code, and efficient development.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">
+        View my work
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get in touch
+      </a>
+    </div>
+
+    <div class="hero-socials">
+      <span class="label">// find me on</span>
+      <a href="https://www.linkedin.com/in/earl-mirshen-dupaya-mabesa-1277652b6/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="mailto:orlmirshen@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a href="tel:+639983362425" aria-label="Phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+<div class="stat-chip chip-1">
+      <div class="ic" style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--accent)">⚙️</div>
+      <div><span class="lb">// framework</span><span class="vl">Laravel</span></div>
+    </div>
+    <div class="stat-chip chip-2">
+      <div class="ic" style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--green)">{ }</div>
+      <div><span class="lb">// organization</span><span class="vl">AWS Cloud Club</span></div>
+    </div>
+    <div class="stat-chip chip-3">
+      <div class="ic">🎓</div>
+      <div><span class="lb">Studying</span><span class="vl">BSIT · PCU Cavite</span></div>
+    </div>
+
+    <div class="editor-card">
+      <div class="editor-titlebar">
+        <div class="tl-dots"><div class="tl-dot r"></div><div class="tl-dot y"></div><div class="tl-dot g"></div></div>
+        <div class="tl-file"><span class="fi">⌘</span> developer.ts — earl-mabesa</div>
+        <div class="tl-actions">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+      </div>
+      <div class="editor-tabs">
+        <div class="editor-tab active">📄 developer<span class="ext">.ts</span><span class="x">×</span></div>
+        <div class="editor-tab">📄 stack<span class="ext">.json</span></div>
+      </div>
+      <div class="editor-body">
+        <div class="editor-lines">
+          <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+        </div>
+        <div class="editor-code">
+<span class="ln"><span class="tk-cm">// portfolio.developer.ts</span></span>
+<span class="ln"><span class="tk-kw">const</span> <span class="tk-var">earl</span> <span class="tk-op">:</span> <span class="tk-class">Developer</span> <span class="tk-op">=</span> {</span>
+<span class="ln">  <span class="tk-prop">name</span><span class="tk-op">:</span> <span class="tk-str">"Earl Mirshen Mabesa"</span>,</span>
+<span class="ln">  <span class="tk-prop">role</span><span class="tk-op">:</span> <span class="tk-str">"Full Stack Developer"</span>,</span>
+<span class="ln">  <span class="tk-prop">location</span><span class="tk-op">:</span> <span class="tk-str">"Cavite, PH"</span>,</span>
+<span class="ln">  <span class="tk-prop">stack</span><span class="tk-op">:</span> [<span class="tk-str">"React"</span>, <span class="tk-str">"Laravel"</span>, <span class="tk-str">"Three.js"</span>,</span>
+<span class="ln">           <span class="tk-str">"Django"</span>, <span class="tk-str">"TypeScript"</span>, <span class="tk-str">"React Native"</span>],</span>
+<span class="ln">  <span class="tk-prop">currentlyBuilding</span><span class="tk-op">:</span> <span class="tk-str">"BakeSphere"</span>,</span>
+<span class="ln">  <span class="tk-prop">openToWork</span><span class="tk-op">:</span> <span class="tk-num">true</span>,</span>
+<span class="ln">  <span class="tk-fn">contact</span>() {</span>
+<span class="ln">    <span class="tk-kw">return</span> <span class="tk-str">"orlmirshen@gmail.com"</span>;</span>
+<span class="ln">  },</span>
+<span class="ln">};</span>
+<span class="ln"><span class="tk-kw">export default</span> <span class="tk-var">earl</span>;</span>
+        </div>
+      </div>
+      <div class="editor-statusbar">
+        <div class="sb-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 3v12"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          main
+        </div>
+        <div class="sb-item">⚡ ready</div>
+        <div class="sb-spacer"></div>
+        <div class="sb-item">TypeScript</div>
+        <div class="sb-item">UTF-8</div>
+        <div class="sb-item">Ln 8, Col 12</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-eyebrow"><span class="num">01.</span> about_me</div>
+      <h2 class="section-title">A bit about <span class="mute">who I am.</span></h2>
+    </div>
+  </div>
+
+  <div class="about-grid reveal">
+    <div class="about-photo">
+      <div class="about-photo-frame"></div>
+      <img src="images/earl.jpg" alt="Earl Mirshen Mabesa portrait" loading="lazy" />
+      <div class="about-photo-tag">
+        <span class="lf"><span class="dot"></span>online</span>
+        <span>~/earl</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <h2>I'm a developer who <span class="accent">who builds UI/UX-focused web and application systems.</span></h2>
+      <p>
+        Currently a <strong>BSIT student</strong> based in Dasmariñas, Cavite, building practical web and application projects. My work includes 
+        <strong> full-stack development
+    
+      </strong> UI/UX-focused systems, </strong>, and freelance video editing.
+      </p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="num">2+</div><div class="lb">YEARS CODING</div></div>
+      
+        <div class="about-stat"><div class="num">22+</div><div class="lb">TECHNOLOGIES</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-eyebrow"><span class="num">02.</span> tech_stack</div>
+      <h2 class="section-title">Tools I use to <span class="mute">build great things.</span></h2>
+    </div>
+    <p class="section-sub">A curated set of languages, frameworks, and tools I reach for daily — from front-end to backend, until designs</p>
+  </div>
+
+  <div class="reveal">
+    <div class="tech-group">
+      <div class="tech-group-label"><span>Languages & Markup</span></div>
+      <div class="tech-grid">
+        <div class="tech-card" style="--tech-color:#3776AB;--tech-bg:rgba(55,118,171,.12)"><div class="tech-icon">Py</div><div><div class="tech-name">Python</div><div class="tech-cat">Language</div></div></div>
+        <div class="tech-card" style="--tech-color:#F7DF1E;--tech-bg:rgba(247,223,30,.12)"><div class="tech-icon">JS</div><div><div class="tech-name">JavaScript</div><div class="tech-cat">Language</div></div></div>
+        <div class="tech-card" style="--tech-color:#3178C6;--tech-bg:rgba(49,120,198,.12)"><div class="tech-icon">TS</div><div><div class="tech-name">TypeScript</div><div class="tech-cat">Language</div></div></div>
+        <div class="tech-card" style="--tech-color:#ED8B00;--tech-bg:rgba(237,139,0,.12)"><div class="tech-icon">Jv</div><div><div class="tech-name">Java</div><div class="tech-cat">Language</div></div></div>
+        <div class="tech-card" style="--tech-color:#00599C;--tech-bg:rgba(0,89,156,.15)"><div class="tech-icon">C++</div><div><div class="tech-name">C++</div><div class="tech-cat">Language</div></div></div>
+        <div class="tech-card" style="--tech-color:#E34F26;--tech-bg:rgba(227,79,38,.12)"><div class="tech-icon">H5</div><div><div class="tech-name">HTML5</div><div class="tech-cat">Markup</div></div></div>
+        <div class="tech-card" style="--tech-color:#1572B6;--tech-bg:rgba(21,114,182,.12)"><div class="tech-icon">C3</div><div><div class="tech-name">CSS3</div><div class="tech-cat">Style</div></div></div>
+        <div class="tech-card" style="--tech-color:#4479A1;--tech-bg:rgba(68,121,161,.12)"><div class="tech-icon">SQL</div><div><div class="tech-name">SQL</div><div class="tech-cat">Query</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-group">
+      <div class="tech-group-label"><span>Frameworks & Libraries</span></div>
+      <div class="tech-grid">
+        <div class="tech-card" style="--tech-color:#FF2D20;--tech-bg:rgba(255,45,32,.12)"><div class="tech-icon">Lv</div><div><div class="tech-name">Laravel</div><div class="tech-cat">Backend</div></div></div>
+        <div class="tech-card" style="--tech-color:#61DAFB;--tech-bg:rgba(97,218,251,.12)"><div class="tech-icon">⚛</div><div><div class="tech-name">React</div><div class="tech-cat">Frontend</div></div></div>
+        <div class="tech-card" style="--tech-color:#7ee787;--tech-bg:rgba(126,231,135,.12)"><div class="tech-icon">Dj</div><div><div class="tech-name">Django</div><div class="tech-cat">Backend</div></div></div>
+        <div class="tech-card" style="--tech-color:#61DAFB;--tech-bg:rgba(97,218,251,.12)"><div class="tech-icon">RN</div><div><div class="tech-name">React Native</div><div class="tech-cat">Mobile</div></div></div>
+        <div class="tech-card" style="--tech-color:#d2a8ff;--tech-bg:rgba(210,168,255,.12)"><div class="tech-icon">3J</div><div><div class="tech-name">Three.js</div><div class="tech-cat">3D / WebGL</div></div></div>
+        <div class="tech-card" style="--tech-color:#7952B3;--tech-bg:rgba(121,82,179,.15)"><div class="tech-icon">Bs</div><div><div class="tech-name">Bootstrap</div><div class="tech-cat">UI</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-group">
+      <div class="tech-group-label"><span>Tools & DevOps</span></div>
+      <div class="tech-grid">
+        <div class="tech-card" style="--tech-color:#4479A1;--tech-bg:rgba(68,121,161,.12)"><div class="tech-icon">My</div><div><div class="tech-name">MySQL</div><div class="tech-cat">Database</div></div></div>
+        <div class="tech-card" style="--tech-color:#F05032;--tech-bg:rgba(240,80,50,.12)"><div class="tech-icon">Git</div><div><div class="tech-name">Git</div><div class="tech-cat">VCS</div></div></div>
+        <div class="tech-card" style="--tech-color:#C9D1D9;--tech-bg:rgba(201,209,217,.08)"><div class="tech-icon">GH</div><div><div class="tech-name">GitHub</div><div class="tech-cat">Hosting</div></div></div>
+        <div class="tech-card" style="--tech-color:#F24E1E;--tech-bg:rgba(242,78,30,.12)"><div class="tech-icon">Fg</div><div><div class="tech-name">Figma</div><div class="tech-cat">Design</div></div></div>
+        <div class="tech-card" style="--tech-color:#007ACC;--tech-bg:rgba(0,122,204,.12)"><div class="tech-icon">VS</div><div><div class="tech-name">VS Code</div><div class="tech-cat">Editor</div></div></div>
+        <div class="tech-card" style="--tech-color:#F78166;--tech-bg:rgba(247,129,102,.12)"><div class="tech-icon">Nb</div><div><div class="tech-name">NetBeans</div><div class="tech-cat">IDE</div></div></div>
+      </div>
+    </div>
+
+    <div class="tech-group">
+      <div class="tech-group-label"><span>Creative & Design</span></div>
+      <div class="tech-grid">
+        <div class="tech-card" style="--tech-color:#E87D0D;--tech-bg:rgba(232,125,13,.12)"><div class="tech-icon">Bl</div><div><div class="tech-name">Blender</div><div class="tech-cat">3D Modeling</div></div></div>
+        <div class="tech-card" style="--tech-color:#9999FF;--tech-bg:rgba(153,153,255,.12)"><div class="tech-icon">Pr</div><div><div class="tech-name">Premiere Pro</div><div class="tech-cat">Video</div></div></div>
+        <div class="tech-card" style="--tech-color:#C9D1D9;--tech-bg:rgba(201,209,217,.08)"><div class="tech-icon">CC</div><div><div class="tech-name">CapCut</div><div class="tech-cat">Video</div></div></div>
+        <div class="tech-card" style="--tech-color:#00C4CC;--tech-bg:rgba(0,196,204,.12)"><div class="tech-icon">Cv</div><div><div class="tech-name">Canva</div><div class="tech-cat">Design</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-eyebrow"><span class="num">03.</span> featured_work</div>
+      <h2 class="section-title">Selected <span class="mute">projects.</span></h2>
+    </div>
+    <p class="section-sub">A look at what I'm currently building. Every project is a chance to learn new tech and ship something real.</p>
+  </div>
+
+  <div class="project-list reveal">
+    <article class="project-card">
+      <div>
+        <div class="project-header">
+          <span class="project-num">PROJECT 01</span>
+          <span class="project-status"><span class="dot"></span>in development</span>
+        </div>
+        <h3 class="project-name">BakeSphere</h3>
+        <p class="project-desc">
+          A full-stack web platform where users design custom cakes in an interactive 3D environment, then connect with bakers via a reverse bidding system — competitive pricing, streamlined order matching, and wallet-based secure payments.
+        </p>
+        <div class="project-tags">
+          <span class="p-tag">Laravel</span>
+          <span class="p-tag">React</span>
+          <span class="p-tag">Three.js</span>
+          <span class="p-tag">MySQL</span>
+          <span class="p-tag">Google Maps API</span>
+          <span class="p-tag">OAuth</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">
+            View case study
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-features-list">
+        <div class="pf-title">key_features</div>
+        <ul class="pf-list">
+          <li>3D interactive cake customization</li>
+          <li>Reverse bidding marketplace</li>
+          <li>Wallet & secure payments</li>
+          <li>Google Sign-In authentication</li>
+          <li>Map-based order tracking</li>
+          <li>Real-time baker–client matching</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-eyebrow"><span class="num">04.</span> work_history</div>
+      <h2 class="section-title">Work & <span class="mute">Experience.</span></h2>
+    </div>
+    <p class="section-sub">A timeline of roles, freelance gigs, and the work that shaped how I build today.</p>
+  </div>
+
+  <div class="timeline reveal">
+    <div class="tl-item">
+      <div class="tl-meta">
+        <span class="tl-date">2025 — Present</span>
+        <span class="tl-type">// Part-time</span>
+      </div>
+      <h3 class="tl-role">Video Editor</h3>
+      <div class="tl-org">@ Kakacomputer Podcast</div>
+      <p class="tl-desc">End-to-end video editing for podcast episodes — improving production quality, pacing, and content delivery for online platforms.</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-meta">
+        <span class="tl-date">2024 — Present</span>
+        <span class="tl-type">// Freelance</span>
+      </div>
+      <h3 class="tl-role">Freelance Developer & Editor</h3>
+      <div class="tl-org">@ Self-Employed</div>
+      <p class="tl-desc">Client-based web development and video editing across freelance projects — from landing pages to full-stack applications, plus video content for social platforms.</p>
+    </div>
+
+    
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ── -->
+<section id="education">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-eyebrow"><span class="num">05.</span> education</div>
+      <h2 class="section-title">Education & <span class="mute">organizations.</span></h2>
+    </div>
+  </div>
+
+  <div class="edu-grid reveal">
+    <div class="edu-card">
+      <div class="edu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <div class="edu-label">University</div>
+<div class="edu-title">BS in Information Technology</div>
+      <div class="edu-sub">Philippine Christian University – Cavite</div>
+      <div class="edu-date">2024 — Present</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+<div class="edu-label">Senior High</div>
+      <div class="edu-title">TVL - ICT Strand</div>
+      <div class="edu-sub">Philippine Christian University – Cavite</div>
+      <div class="edu-date">2021 — 2023</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
+      <div class="edu-label">Junior High</div>
+      <div class="edu-title">Junior High School</div>
+      <div class="edu-sub">Christar Academy</div>
+      <div class="edu-date">2017 — 2021</div>
+    </div>
+  </div>
+
+<div class="events-section reveal">
+    <h3 class="events-title">Organizations</h3>
+    <div class="event-list">
+      <div class="event-item"><div class="event-yr">2024 - Present</div><div class="event-name">AWS Cloud Club PCU – Cavite</div><div class="event-role">VICE CMO</div></div>
+      <div class="event-item"><div class="event-yr">2023 - 2024</div><div class="event-name">Computer Society PCU – Cavite</div><div class="event-role">PUBLICATION COMMITTEE</div></div>
+      <div class="event-item"><div class="event-yr">2023 - 2024</div><div class="event-name">AWS Cloud Club PCU – Cavite</div><div class="event-role">MARKETING & MANAGEMENT</div></div>
+    </div>
+    <h3 class="events-title" style="margin-top:32px">Events Hosted</h3>
+    <div class="event-list">
+      <div class="event-item"><div class="event-yr">2025</div><div class="event-name">Digital Literacy: Paglalakbay sa Kaalaman Tungo sa Coi-Linawan!</div><div class="event-role">HOST</div></div>
+      <div class="event-item"><div class="event-yr">2024</div><div class="event-name">Get AWS Certified: Roadmap to Career Advancement!</div><div class="event-role">HOST</div></div>
+      <div class="event-item"><div class="event-yr">2024</div><div class="event-name">Wired Foundations: Exploring Networks and Microcontrollers!</div><div class="event-role">HOST</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-card reveal">
+    <div class="contact-eyebrow">// let's_build_something</div>
+    <h2 class="contact-title">Have a project? <br/><span class="gradient">Let's talk.</span></h2>
+    <p class="contact-sub">Open to freelance work, collaborations, internships, and full-time opportunities. Let's create something great together.</p>
+    <div class="contact-grid">
+      <a href="mailto:orlmirshen@gmail.com" class="contact-link">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><span class="lb">EMAIL</span><span class="vl">orlmirshen@gmail.com</span></div>
+      </a>
+      <a href="https://www.linkedin.com/in/earl-mirshen-dupaya-mabesa-1277652b6/" target="_blank" rel="noopener" class="contact-link">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45z"/></svg></div>
+        <div><span class="lb">LINKEDIN</span><span class="vl">@earl-mabesa</span></div>
+      </a>
+      <a href="tel:+639983362425" class="contact-link">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><span class="lb">PHONE</span><span class="vl">+63 998 336 2425</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2025 Earl Mirshen Mabesa · All rights reserved</div>
+
+  <div><a href="#hero">↑ Back to top</a></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>
